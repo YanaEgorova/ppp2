@@ -1,0 +1,105 @@
+.header__wrapper {
+    position: relative;
+}
+
+.header {
+    padding: 1.6rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    background: var(--main-bg-color) url('../images/menu-bg.png') no-repeat center / contain ;
+    position: absolute;
+    top: 8rem;
+    width: calc(100% - 4rem);
+     height: calc(100vh - 9.6rem);
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    scale: 0;
+        transition: all 500ms linear;
+        opacity: 0;
+        pointer-events: none;
+        min-height: 19rem;
+
+}
+
+.menu-opened .nav {
+    scale: 1;
+    pointer-events: initial;
+    opacity: 1;
+}
+
+.nav__item:not(:last-child) {
+    margin-bottom: 2.4rem;
+}
+
+.nav__link {
+    color: inherit;
+    transition: color var(--transition);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--accent-text-color);
+}
+
+.menu-btn {
+      border: .1rem solid transparent;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0 .4rem;
+     transition: border-color var(--transition);
+}
+
+.menu-btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: var(--second-brand-color);
+     transition: background-color var(--transition);
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+     position: absolute;
+     content: '';
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: var(--second-brand-color);
+     transition: all var(--transition);
+}
+
+.menu-btn span::before {
+    top: -.5rem;
+}
+.menu-btn span::after {
+    top: .5rem;
+}
+
+.menu-btn:hover  {
+    border: .1rem solid var(--second-brand-color);
+}
+
+.menu-opened .menu-btn span {
+    background-color: transparent;
+}
+
+.menu-opened .menu-btn span::before {
+    transform: rotate(45deg) translate(0, -50%);
+    top: 50%;
+}
+
+.menu-opened .menu-btn span::after {
+    transform: rotate(-45deg) translate(0, -50%);
+    top: 50%;
+}

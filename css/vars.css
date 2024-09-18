@@ -1,0 +1,22 @@
+:root {
+  --first-brand-color: #00B068;
+  --second-brand-color: #292929;
+  --third-brand-color: #F0F0F0;
+  --fourth-brand-color: #E4E5E6;
+  --fifth-brand-color: #BCDFD1;
+
+  --main-bg-color: #FFFFFF;
+
+   --main-text-color: #292929;
+   --accent-text-color: #00B068;
+
+  --main-font:  'Poppins Light';
+  --title-font:  'Impact';
+  --subtitle-font: 'Poppins Medium';
+  --upper-main-font: 'Poppins Regular';
+
+  --transition: 300ms linear;
+
+
+  font-size: 62.5%;
+}
